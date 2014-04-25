@@ -1,0 +1,14 @@
+{
+    "name": "janis/bakalaurs",
+    "description": "Sentiment classification crowd-source style",
+    "license": "Apache",
+    "authors": [
+        {
+            "name": "Jānis Peisenieks",
+            "email": "janis@peisenieks.lv"
+        }
+    ],
+    "require": {
+        "zendframework/zendframework1": "1.12"
+    }
+}
