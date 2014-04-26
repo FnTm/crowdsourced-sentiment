@@ -3,12 +3,10 @@ require_once "vendor/autoload.php";
 $baseDir = "/home/janis/tweets/twitter/tweets2";
 $files = scandir($baseDir);
 $params = array(
-    'host' => '127.0.0.1',
-    'username' => 'tweets',
-    'password' => 'tweets',
-    'dbname' => 'sentiment',
     'driver_options' => array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8;')
 );
+//Include the db access file
+$params=array_merge($params,include("db.access.php"));
 $db = Zend_Db::factory('PDO_MYSQL', $params);
 //var_export($db->listTables());
 //var_export($db->isConnected());
